@@ -41,7 +41,7 @@ export default function useCountdown(endTime) {
         const day = ~~(diffSec / DAY);
         setValue(`${digi(day)}:${digi(hour)}:${digi(min)}:${digi(sec)}`);
       };
-      timeId = window.setInterval(tick, 1000);
+      timeId = window.setInterval(tick, 1000); //setInterval延遲了某段時間做某事(在這邊為tick)，並且一直重複執行
       tick();
     }
     return () => {
